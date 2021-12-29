@@ -1,0 +1,233 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@font-face {
+    font-family: Feather;
+    src: url('fonts/feather-bold.ttf') format('truetype');
+    font-weight: normal;
+}
+
+:root {
+    --cor01: rgb(137, 226, 25);
+    --cor02: rgb(0, 136, 204);
+    --cor03: rgba(229, 229, 229, 1);
+    --fonte01: 'Feather', sans-serif;
+    --fonte02: 'Nunito', sans-serif;
+    --texto-sombra: 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(68.15deg, var(--cor01), var(--cor02));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: var(--fonte02); 
+    color: white;  
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header.cabecalho {
+    text-align: center;
+    padding: 10px;
+    font-family: var(--fonte01);
+    color: white;
+    text-shadow: var(--texto-sombra);
+    font-size: 0.8em;
+    border-bottom: 0.4px solid white;
+}
+
+main.conteudo {
+    padding: 10px;
+}
+
+section.conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+    font-weight: bold;
+}
+
+div.conteudo-principal-texto {
+    width: 90%;
+    text-align: center;
+}
+
+p.conteudo-principal-paragrafo {
+    line-height: 1.8em;
+    text-shadow: var(--texto-sombra);
+}
+
+p > a {
+    text-shadow: none;
+}
+
+div.conteudo-principal-turmas {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+div.conteudo-duo {
+    width: 60%;
+}
+
+img.conteudo-duo-imagem {
+    width: 100%;
+}
+
+div.conteudo-subtitulo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+h2.subtitulo {
+    text-align: center;
+    padding-top: 10px;
+    border-top: 0.4px solid white;
+    text-shadow: var(--texto-sombra);
+}
+
+section.conteudo-secundario {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    row-gap: 10px;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+img.conteudo-secundario-bandeira {
+    height: 21.33px;
+    width: 32px;
+    border-radius: 4px;
+}
+
+button.botao {
+    display: block;
+    background-color: white;
+    padding: 10px;
+    line-height: 10px;
+    text-decoration: none;
+    color: rgba(175, 175, 175, 1);
+    font-weight: bold;
+    margin: 0 auto;
+    width: 100px;
+    border-radius: 16px;
+    border: 2px solid var(--cor03);
+    border-bottom: 6px solid var(--cor03);
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+button:hover {
+    color: var(--cor02);
+    background-color: var(--cor03);
+    border-bottom: 6px solid rgba(206, 206, 206, 1);
+}
+
+button:active {
+    border-bottom: 2px solid var(--cor03);
+    margin-top: 2px;
+}
+
+button.botao a {
+    color: var(--cor02);
+}
+
+footer.rodape {
+    border-top: 0.4px solid white;
+    padding: 10px;
+    text-align: center;
+    text-shadow: var(--texto-sombra);
+}
+
+footer > a {
+    text-shadow: none;
+}
+
+@media screen and (min-width: 600px) {
+    header.cabecalho {
+        font-size: 1em;
+    }
+
+    section.conteudo-principal {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 80%;
+        height: 50vh;
+        margin: auto;
+        font-size: 1.1em;
+        padding-bottom: 10px;
+    }
+    
+    div.conteudo-principal-texto {
+        width: 40%;
+        text-align: center;
+    }
+    
+    div.conteudo-principal-turmas {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        gap: 10px;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    div.conteudo-duo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 40%;
+        height: 100%;
+    }
+
+    img.conteudo-duo-imagem {
+        max-width: 300px;
+    }
+
+    section.conteudo-secundario {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+/* Gambiarra sinistra, tentando mitigar comportamendo estranho quando a altura da tela fica abaixo dos 600px */
+
+@media screen and (max-height: 600px) {
+    section.conteudo-principal {
+        display: inline-flex;
+        height: 50vh;
+    }
+    div.conteudo-duo {
+        display: inline-flex;
+        width: 40%;
+        height: 100%;
+    }
+    img.conteudo-duo-imagem {
+        min-height: 200px;
+    }
+}
