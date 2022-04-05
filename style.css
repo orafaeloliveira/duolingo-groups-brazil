@@ -10,6 +10,7 @@
     --cor01: rgb(137, 226, 25);
     --cor02: rgb(0, 136, 204);
     --cor03: rgba(229, 229, 229, 1);
+    --cor04: rgb(89, 102, 242);
     --fonte01: 'Feather', sans-serif;
     --fonte02: 'Nunito', sans-serif;
     --texto-sombra: 1px 1px rgba(0, 0, 0, 0.5);
@@ -21,7 +22,7 @@
 }
 
 body {
-    background-image: linear-gradient(68.15deg, var(--cor01), var(--cor02));
+    background-image: linear-gradient(68.15deg, var(--cor01), var(--cor02), var(--cor04));
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: var(--fonte02); 
