@@ -22,11 +22,13 @@
 }
 
 body {
+    position: relative;
     background-image: linear-gradient(68.15deg, var(--cor01), var(--cor02), var(--cor04));
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: var(--fonte02); 
     color: white;  
+    width: 100vw;
 }
 
 a {
@@ -81,7 +83,7 @@ div.conteudo-principal-turmas {
 }
 
 div.conteudo-duo {
-    width: 60%;
+    width: 50%;
 }
 
 img.conteudo-duo-imagem {
@@ -105,13 +107,19 @@ h2.subtitulo {
 }
 
 section.conteudo-secundario {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    /* display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto; */
     row-gap: 10px;
     text-align: center;
     width: 80%;
     margin: auto;
+}
+
+div.conteudo-secundario-item {
+    margin: 10px;
 }
 
 img.conteudo-secundario-bandeira {
@@ -152,8 +160,17 @@ button.botao a {
     color: var(--cor02);
 }
 
+div.border {
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: auto auto;
+    border: 0.4px solid white;
+    padding: 10px;
+    margin: auto;
+}
+
 footer.rodape {
-    border-top: 0.4px solid white;
+    /* border-top: 0.4px solid white; */
     padding: 10px;
     text-align: center;
     text-shadow: var(--texto-sombra);
@@ -163,7 +180,7 @@ footer > a {
     text-shadow: none;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
     header.cabecalho {
         font-size: 1em;
     }
@@ -212,6 +229,11 @@ footer > a {
         gap: 30px;
         justify-content: center;
         text-align: center;
+        padding: 20px;
+    }
+    div.border {
+        display: flex;
+        border: 1px solid white;
         padding: 20px;
     }
 }
